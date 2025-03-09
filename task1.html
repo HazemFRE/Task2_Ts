@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .product-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .product-form input,
+        .product-form textarea,
+        .product-form button {
+            margin: 5px 0;
+            padding: 8px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-form button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-form button:hover {
+            background-color: #218838;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            border-radius: 8px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Product Manager</h1>
+
+    <!-- إضافة منتج -->
+    <!-- الفورم بتحتوي على حقول لإدخال بيانات المنتج -->
+    <!-- الحقول المطلوبة: اسم المنتج، وصف المنتج، السعر، الكمية -->
+    <!-- الزر بيكون عبارة عن submit button بيتم استخدامه لإضافة المنتج -->
+    <!-- الفورم بيحتوي على id بتساعد على تحديد الفورم بالجافاسكربت -->
+
+    <form id="product-form" class="product-form">
+        <input type="text" id="name" placeholder="Product Name" required>
+        <textarea id="description" placeholder="Product Description" required></textarea>
+        <input type="number" id="price" placeholder="Price (JOD)" required min="0" step="0.01">
+        <input type="number" id="quantity" placeholder="Quantity" required min="1">
+        <button type="submit">Add Product</button>
+    </form>
+
+ 
+    <!-- عرض المنتجات -->
+    <div id="product-container" class="product-container"></div> 
+
+    <script src="Task1.ts"></script> // تم تضمين الملف الجافاسكربتيC
+</body>
+
+</html>
